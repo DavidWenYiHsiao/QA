@@ -97,64 +97,36 @@
                 userQuestion.toLowerCase().includes("hobby") || 
                 userQuestion.toLowerCase().includes("interest")) {
                 answerContainer.textContent = "My hobbies include badminton and Go, a Japanese board game.";
-                answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("name")) {
                 answerContainer.textContent = "My name is David Wen-Yi Hsiao. :)";
-                answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("school") ||
                 userQuestion.toLowerCase().includes("university")) {
                 answerContainer.textContent = "I'm presently pursuing my studies at the Vancouver campus of the University of British Columbia";
-                answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("year") ||
                 userQuestion.toLowerCase().includes("study")||
                 userQuestion.toLowerCase().includes("degree")) {
                 answerContainer.textContent = "I'm a third-year undergraduate student majoring in electrical engineering at the University of British Columbia's Vancouver campus.";
-                answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("age") ||
                 userQuestion.toLowerCase().includes("old")) {
                 answerContainer.textContent = "I'm 20 years old!";
-                answerImage.style.display = "block";
-            } else if (userQuestion.toLowerCase().includes("how are you")) {
+            } else if (userQuestion.toLowerCase().includes("how are you") || 
+            userQuestion.toLowerCase().includes("how are u")) {
                 answerContainer.textContent = "Great, I'm doing well!";
-                answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("hi") || 
                 userQuestion.toLowerCase().includes("hello")) {
                 answerContainer.textContent = "Hiiii! :)";
-                answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("game")) {
                 answerContainer.textContent = "I enjoy playing Overwatch and League of Legends, and I'm also a fan of The Legend of Zelda series.";
-                answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("food")) {
                 answerContainer.textContent = "My absolute favorite foods are ramen and sushi!!";
-                answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("drink")) {
                 answerContainer.textContent = "Bubble Tea!!";
-                answerImage.style.display = "block";
-            } else if (userQuestion.toLowerCase().includes("!") ||
-                userQuestion.toLowerCase().includes("@")||
-                userQuestion.toLowerCase().includes("#")||
-                userQuestion.toLowerCase().includes("$")||
-                userQuestion.toLowerCase().includes("%")||
-                userQuestion.toLowerCase().includes("&")||
-                userQuestion.toLowerCase().includes("*")||
-                userQuestion.toLowerCase().includes("(")||
-                userQuestion.toLowerCase().includes(")")||
-                userQuestion.toLowerCase().includes("^")||
-                userQuestion.toLowerCase().includes("+")||
-                userQuestion.toLowerCase().includes("-")||
-                userQuestion.toLowerCase().includes("=")||
-                userQuestion.toLowerCase().includes("_")||
-                userQuestion.toLowerCase().includes("@")||
-                userQuestion.toLowerCase().includes("|")||
-                userQuestion.toLowerCase().includes("?")||
-                userQuestion.toLowerCase().includes("~")
-                ) {
-                answerContainer.textContent = "!@#$+_@)#*$|?/^#&(+-~~";
-                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("favorite colour") ||
+                userQuestion.toLowerCase().includes("favorite color")) {
+                answerContainer.textContent = "BLUE!";
             } else {
                 // Handle other questions here
                 answerContainer.textContent = "I don't have an answer for that question.";
-                answerImage.style.display = "none"; // Hide the image for unknown questions
             }
         });
 
