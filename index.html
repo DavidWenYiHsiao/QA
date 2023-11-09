@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q&A</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f06, #9f6);
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #question-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"] {
+            margin: 10px 0;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            background: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            transform: scale(1.03);
+        }
+
+    </style>
+</head>
+<body>
+    <video autoplay loop muted>
+        <source src="1.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <h1>Ask Me Anything</h1>
+        <p>Have Fun!</p>
+        <form id="question-form">
+            <input type="text" id="question-input" placeholder="Ask your question...">
+            <button type="submit">Submit</button>
+        </form>
+        <div id="answer-container">
+            <p>Response:</p>
+            <p id="answer">Waiting for your question...</p>
+            <img id="answer-image" style="display: none;">
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("question-form");
+        const questionInput = document.getElementById("question-input");
+        const answerContainer = document.getElementById("answer");
+        const answerImage = document.getElementById("answer-image");
+
+        function clearAnswer() {
+            answerContainer.textContent = "Waiting for your question...";
+            answerImage.style.display = "none";
+        }
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const userQuestion = questionInput.value;
+            clearAnswer();
+
+            if (userQuestion.toLowerCase().includes("hobbies") || 
+                userQuestion.toLowerCase().includes("hobby") || 
+                userQuestion.toLowerCase().includes("interest")) {
+                answerContainer.textContent = "My hobbies include badminton and Go, a Japanese board game.";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("name")) {
+                answerContainer.textContent = "My name is David Wen-Yi Hsiao. :)";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("school") ||
+                userQuestion.toLowerCase().includes("university")) {
+                answerContainer.textContent = "I'm presently pursuing my studies at the Vancouver campus of the University of British Columbia";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("year") ||
+                userQuestion.toLowerCase().includes("study")||
+                userQuestion.toLowerCase().includes("degree")) {
+                answerContainer.textContent = "I'm a third-year undergraduate student majoring in electrical engineering at the University of British Columbia's Vancouver campus.";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("age") ||
+                userQuestion.toLowerCase().includes("old")) {
+                answerContainer.textContent = "I'm 20 years old!";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("how are you")) {
+                answerContainer.textContent = "Great, I'm doing well!";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("hi") || 
+                userQuestion.toLowerCase().includes("hello")) {
+                answerContainer.textContent = "Hiiii :)";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("game")) {
+                answerContainer.textContent = "I enjoy playing Overwatch and League of Legends, and I'm also a fan of The Legend of Zelda series.";
+                answerImage.style.display = "block";
+            } else {
+                // Handle other questions here
+                answerContainer.textContent = "I don't have an answer for that question.";
+                answerImage.style.display = "none"; // Hide the image for unknown questions
+            }
+        });
+
+        questionInput.addEventListener("input", clearAnswer);
+    </script>
+</body>
+</html>
