@@ -119,10 +119,37 @@
                 answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("hi") || 
                 userQuestion.toLowerCase().includes("hello")) {
-                answerContainer.textContent = "Hiiii :)";
+                answerContainer.textContent = "Hiiii! :)";
                 answerImage.style.display = "block";
             } else if (userQuestion.toLowerCase().includes("game")) {
                 answerContainer.textContent = "I enjoy playing Overwatch and League of Legends, and I'm also a fan of The Legend of Zelda series.";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("food")) {
+                answerContainer.textContent = "My absolute favorite foods are ramen and sushi!!";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("drink")) {
+                answerContainer.textContent = "Bubble Tea!!";
+                answerImage.style.display = "block";
+            } else if (userQuestion.toLowerCase().includes("!") ||
+                userQuestion.toLowerCase().includes("@")||
+                userQuestion.toLowerCase().includes("#")||
+                userQuestion.toLowerCase().includes("$")||
+                userQuestion.toLowerCase().includes("%")||
+                userQuestion.toLowerCase().includes("&")||
+                userQuestion.toLowerCase().includes("*")||
+                userQuestion.toLowerCase().includes("(")||
+                userQuestion.toLowerCase().includes(")")||
+                userQuestion.toLowerCase().includes("^")||
+                userQuestion.toLowerCase().includes("+")||
+                userQuestion.toLowerCase().includes("-")||
+                userQuestion.toLowerCase().includes("=")||
+                userQuestion.toLowerCase().includes("_")||
+                userQuestion.toLowerCase().includes("@")||
+                userQuestion.toLowerCase().includes("|")||
+                userQuestion.toLowerCase().includes("?")||
+                userQuestion.toLowerCase().includes("~")
+                ) {
+                answerContainer.textContent = "!@#$+_@)#*$|?/^#&(+-~~";
                 answerImage.style.display = "block";
             } else {
                 // Handle other questions here
