@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Q&A</title>
     <style>
@@ -124,6 +125,8 @@
             } else if (userQuestion.toLowerCase().includes("favorite colour") ||
                 userQuestion.toLowerCase().includes("favorite color")) {
                 answerContainer.textContent = "BLUE!";
+            } else if (userQuestion.toLowerCase().includes("language")) {
+                answerContainer.textContent = "I speak Mandarin fluently, and I am proficient in English.";
             } else {
                 // Handle other questions here
                 answerContainer.textContent = "I don't have an answer for that question.";
